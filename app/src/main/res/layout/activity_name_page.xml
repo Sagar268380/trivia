@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent"
+    tools:context=".NamePageActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Name"
+        android:textSize="30dp"
+        android:textColor="@color/mainColor"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"></TextView>
+
+
+
+        <EditText
+            android:id="@+id/custommessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#424242"
+            android:textSize="17sp"
+            android:paddingLeft="15dp"
+            android:hint="Enter your name"
+            android:background="@drawable/edit_bg"
+            android:textColorHint="#000"
+            android:layout_margin="15dp"
+            android:inputType="text"
+            android:scrollbars="vertical"
+            />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="10dp"
+        android:textStyle="bold"
+        android:theme="@style/FormButton"
+        android:textColorHint="@color/whiteColor"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="Next"
+        android:id="@+id/addMoney"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"/>
+
+</LinearLayout>

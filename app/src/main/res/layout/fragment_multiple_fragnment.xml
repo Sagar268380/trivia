@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".QuestionFragnment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q. Who is the best cricketer in the world?"
+            android:textColor="#000"
+            android:textStyle="normal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="10dp"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            ></TextView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="60dp">
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A) Sachin Tendulkar"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    ></CheckBox>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="60dp">
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B) Virat Kohli"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    ></CheckBox>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="60dp">
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C) Adam Gilchirst"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    ></CheckBox>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="60dp">
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D) Jacques Kallis"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    ></CheckBox>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:textStyle="bold"
+            android:theme="@style/FormButton"
+            android:textColorHint="@color/whiteColor"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Next"
+            android:id="@+id/addMoney"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+</FrameLayout>
