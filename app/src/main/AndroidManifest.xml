@@ -10,14 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HistoryActivity">
+
+        </activity>
+        <activity android:name=".ResultPageActivity"></activity>
+        <activity android:name=".NamePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultPageActivity"></activity>
-        <activity android:name=".NamePageActivity"></activity>
         <activity android:name=".MainActivity">
 
         </activity>

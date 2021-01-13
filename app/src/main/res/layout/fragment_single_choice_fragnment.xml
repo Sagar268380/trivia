@@ -2,9 +2,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/content_frame"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".QuestionFragnment">
+    tools:context=".QuestionChoiceFragnment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
                 android:layout_height="wrap_content"
                 android:text="Q. Who is the best cricketer in the world?"
                 android:textColor="#000"
+                android:id="@+id/question1"
                 android:textStyle="normal"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
@@ -39,9 +41,8 @@
                 android:layout_height="200dp">
                 <RadioGroup
                     android:layout_width="match_parent"
+                    android:id="@+id/radioGender"
                     android:layout_height="wrap_content">
-
-
 
                 <RadioButton
                     android:layout_width="match_parent"
@@ -49,6 +50,7 @@
                     android:text="A) Sachin Tendulkar"
                     android:textColor="#000"
                     android:textStyle="bold"
+                    android:id="@+id/option1"
                     android:checked="false"
                     android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
@@ -63,6 +65,7 @@
                     android:textColor="#000"
                     android:textStyle="bold"
                     android:checked="false"
+                    android:id="@+id/option2"
                     android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
                     android:textSize="18dp"
@@ -77,6 +80,8 @@
                     android:textColor="#000"
                     android:textStyle="bold"
                     android:checked="false"
+                    android:id="@+id/option3"
+
                     android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
                     android:textSize="18dp"
@@ -89,6 +94,7 @@
                     android:textColor="#000"
                     android:checked="false"
                     android:textStyle="bold"
+                    android:id="@+id/option4"
                     android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
                     android:textSize="18dp"
@@ -108,11 +114,24 @@
             android:textColorHint="@color/whiteColor"
             android:backgroundTint="@color/colorPrimary"
             android:hint="Next"
-            android:id="@+id/addMoney"
+            android:id="@+id/btnNext"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"/>
-
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cornerRadius="10dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:theme="@style/FormButton"
+            android:textColorHint="@color/whiteColor"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Submit"
+            android:id="@+id/btnSubmit"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"/>
 
     </LinearLayout>
 </FrameLayout>
