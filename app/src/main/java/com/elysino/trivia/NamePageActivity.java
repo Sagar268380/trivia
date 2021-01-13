@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NamePageActivity extends AppCompatActivity {
 
@@ -35,14 +36,19 @@ public class NamePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Put data in SharedPreferences for further use
-                editor.putString("name",etName.getText().toString());
-                editor.apply();
+                String name=etName.getText().toString();
+                if (name.equals("")){
+                    Toast.makeText(NamePageActivity.this, "Please enter name", Toast.LENGTH_SHORT).show();
+                }else {
+                    //Put data in SharedPreferences for further use
+                    editor.putString("name",name);
+                    editor.apply();
 
-                //Use Intent for Change Activity
-                Intent intent=new Intent(NamePageActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                    //Use Intent for Change Activity
+                    Intent intent=new Intent(NamePageActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 
