@@ -39,8 +39,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
         //set data in text field
 
-        holder.txtQuestion1.setText("Q. "+historyModel.getQuestion1()+" ? ");
-        holder.txtQuestion2.setText("Q. "+historyModel.getQuestion2()+" ? ");
+        holder.txtQuestion1.setText("Q. "+historyModel.getQuestion1());
+        holder.txtQuestion2.setText("Q. "+historyModel.getQuestion2());
 
         holder.txtAns1.setText("Ans. "+historyModel.getAns1());
         holder.txtAns2.setText("Ans. "+historyModel.getAns2());

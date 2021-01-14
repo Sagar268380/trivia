@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.elysino.trivia.model.DataModel;
 import com.elysino.trivia.sqllite.DatabaseHelper;
@@ -105,24 +106,6 @@ public class MultipleChoiceFragnment extends Fragment {
                     ch2.setText(MainActivity.dataModelArrayList.get(MainActivity.position).getOption3());
                     ch3.setText(MainActivity.dataModelArrayList.get(MainActivity.position).getOption4());
                 }
-              /*  if (type.equals("single")){
-                    Fragment fragment = new QuestionFragnment();
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.content_frame, fragment);
-                    fragmentTransaction.commit();
-                }else {
-                    if(ch.isChecked())
-                        msg = ch.getText().toString();
-                    if(ch1.isChecked())
-                        msg = ch1.getText().toString();
-                    if(ch2.isChecked())
-                        msg = ch2.getText().toString();
-                    if(ch3.isChecked())
-                        msg = ch3.getText().toString();
-
-                    dataModel.setAnswer(msg);
-                }*/
             }
 
 
@@ -156,37 +139,42 @@ public class MultipleChoiceFragnment extends Fragment {
                 else if (ch3.isChecked())
                     msg+=" , " +ch3.getText().toString();
 
-                //set answerr
+                if (msg.equals("")){
+                    Toast.makeText(getActivity(), "Please Choice Something", Toast.LENGTH_SHORT).show();
+                }else {
+                    //set answerr
 
-                MainActivity.dataModelArrayList.get(MainActivity.position).setAnswer(msg);
-                Date date = new Date();
-                Calendar cal=Calendar.getInstance();
-                cal.setTime(date);
-                String dayNumberSuffix = getDayNumberSuffix(cal.get(Calendar.DAY_OF_MONTH));
+                    MainActivity.dataModelArrayList.get(MainActivity.position).setAnswer(msg);
+                    Date date = new Date();
+                    Calendar cal=Calendar.getInstance();
+                    cal.setTime(date);
+                    String dayNumberSuffix = getDayNumberSuffix(cal.get(Calendar.DAY_OF_MONTH));
 
-                //make date with suffix
-                SimpleDateFormat sdf8 = new SimpleDateFormat("d'"+dayNumberSuffix+"' MMM hh:mm aaa");
-                String currentDateandTime = sdf8.format(new Date());
+                    //make date with suffix
+                    SimpleDateFormat sdf8 = new SimpleDateFormat("d'"+dayNumberSuffix+"' MMM hh:mm aaa");
+                    String currentDateandTime = sdf8.format(new Date());
 
 
-                //put data in content values
-                ContentValues values = new ContentValues();
-                values.put("QUESTION1", MainActivity.dataModelArrayList.get(0).getQuestion());
-                values.put("ANSWER1", MainActivity.dataModelArrayList.get(0).getAnswer());
-                values.put("QUESTION2", MainActivity.dataModelArrayList.get(MainActivity.position).getQuestion());
-                values.put("ANSWER2", msg);
-                values.put("NAME",sharedPreferences.getString("name",""));
-                values.put("DATE",currentDateandTime);
+                    //put data in content values
+                    ContentValues values = new ContentValues();
+                    values.put("QUESTION1", MainActivity.dataModelArrayList.get(0).getQuestion());
+                    values.put("ANSWER1", MainActivity.dataModelArrayList.get(0).getAnswer());
+                    values.put("QUESTION2", MainActivity.dataModelArrayList.get(MainActivity.position).getQuestion());
+                    values.put("ANSWER2", msg);
+                    values.put("NAME",sharedPreferences.getString("name",""));
+                    values.put("DATE",currentDateandTime);
 
-                // Inserting Row
-                db.insert("HISTORY", null, values);
-                //2nd argument is String containing nullColumnHack
-                db.close();
-                // Closing databas
+                    // Inserting Row
+                    db.insert("HISTORY", null, values);
+                    //2nd argument is String containing nullColumnHack
+                    db.close();
+                    // Closing databas
 
-                Intent intent=new Intent(getActivity(),ResultPageActivity.class);
-                startActivity(intent);
-                getActivity().finish();
+                    Intent intent=new Intent(getActivity(),ResultPageActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
+                }
+
             }
         });
         return view;

@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         // I was given only two question but further more question so problem occur so i developed a app for dynamic
 
         //We have two type of question single choice or multi choice.
-        dataModelArrayList.add(new DataModel("Who is the best cricketer in the world","Sachin Tendulkar","Virat Kolli","Adam Gilchirst","Jacques Kallis","","single"));
-        dataModelArrayList.add(new DataModel("What are the colors in the Indian national flag","White","Yellow","Orange","Green","","multi"));
+        dataModelArrayList.add(new DataModel("Who is the best cricketer in the world ?","Sachin Tendulkar","Virat Kolli","Adam Gilchirst","Jacques Kallis","","single"));
+        dataModelArrayList.add(new DataModel("What are the colors in the Indian national flag ?","White","Yellow","Orange","Green","","multi"));
 
         //get position or question type
         DataModel d=dataModelArrayList.get(position);

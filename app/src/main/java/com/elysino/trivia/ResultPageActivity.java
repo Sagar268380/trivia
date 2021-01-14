@@ -50,7 +50,7 @@ public class ResultPageActivity extends AppCompatActivity {
             String question1=dataModel.getQuestion();
             String answer1=dataModel.getAnswer();
 
-            txtQuestion1.setText("Q. "+question1+" ? ");
+            txtQuestion1.setText("Q. "+question1);
             txtAns1.setText("Ans. "+answer1);
 
              DataModel dataModel1=MainActivity.dataModelArrayList.get(1);
@@ -58,7 +58,7 @@ public class ResultPageActivity extends AppCompatActivity {
               String question2=dataModel1.getQuestion();
               String answer2=dataModel1.getAnswer();
 
-               txtQuestion2.setText("Q. "+question2+" ? ");
+               txtQuestion2.setText("Q. "+question2);
                txtAns2.setText("Ans. "+answer2);
 
 
